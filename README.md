@@ -1,4 +1,4 @@
-# Poison is not Traceless: Black-Box Detection of Poisoning Attacks
+# Poison is not Traceless: Fully-Agnostic Detection of Poisoning Attacks
 
 ## Abstract
 
