@@ -16,22 +16,25 @@ learn”. In our case, we use a meta-learner to estimate,
 given a potentially poisoned dataset, the hypothetical
 performance of a model if the dataset was clean
 
-<img src="diva01.png" alt="DIVA at prediction time" width="600"/>
+<p align="center"><img src="diva01.png" alt="DIVA at prediction time" width="500"/></p>
 
 DIVA pre-trains a meta-learner on meta-data gathered from other datasets. 
 To predict whether a potentially poisoned dataset is indeed poisoned, DIVA applies the meta-learner to estimate the clean accuracy, and finally compares the estimated accuracy to the observed accuracy on the potentially poisoned dataset.
 A dataset is flagged as poisoned if the discrepancy exceeds a certain threshold.
 
-<img src="diva_full.svg" alt="DIVA framework" width="600"/>
+<p align="center"><img src="diva_full.svg" alt="DIVA framework" width="450"/></p>
 
 DIVA pre-trains a meta-learner as follows:
 1. Collect multiple datasets; one of them is the input
-dataset here. 2. Split each dataset into training and
+dataset here.
+2. Split each dataset into training and
 testing sets and generate multiple poisoned datasets
-from the training set. 3. Create a meta-database by
-extracting C-Measures from the clean and poisoned
+from the training set.
+3. Create a meta-database by
+extracting Complexity Measures (C-Measures) from the clean and poisoned
 datasets as features and using the classifiers’ accuracies
-as targets. 4. Train the meta-learner.
+as targets.
+4. Train the meta-learner.
 
 
 ## Supplementary material
